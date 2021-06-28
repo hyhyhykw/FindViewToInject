@@ -1,0 +1,46 @@
+<idea-plugin>
+    <id>com.inject.plugin.FindViewToInject</id>
+    <name>FindViewToInject</name>
+    <version>1.0.0</version>
+    <vendor email="hyhyhykw1@gmail.com" url="https://github.com/hyhyhykw">hyhyhykw</vendor>
+
+    <description><![CDATA[
+     Convert findView to Inject,you can also see InjectHelper
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <html>
+
+  <b>1.0.0</b> (06/26/2021)
+  <ul>
+    <li>Initial</li>
+  </ul>
+</html>
+    ]]>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="ConvertAction"
+                class="com.inject.plugin.converter.ConvertAction"
+                text="ConvertAction"
+                icon="PluginIcons.ICON"
+                description="Convert findViewById to Inject">
+            <add-to-group group-id="GenerateGroup"/>
+        </action>
+    </actions>
+
+</idea-plugin>
